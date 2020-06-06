@@ -1,0 +1,68 @@
+ul .list-group-item {
+    /* height: 6rem; */
+    width: 85%;
+    margin: 0% 2% 1% 2%;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+
+    width: 35%;
+    margin-right: 5%;
+}
+
+.list-group-item {
+    padding:1%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #dcd6f7;
+    
+}
+
+.del {
+    margin: 0.2em 0.5rem 0.2rem 45%;
+    background-color: #424874;
+    border: #424874
+}
+
+@media (max-width: 1500px) {
+    li h2 {
+      font-size: 145%;
+      top: 25%;
+      bottom: 15%;
+    }
+  }
+
+@media (min-width: 1031px) and (max-width: 1200px) {
+    li h2 {
+      font-size: 145%;
+      top: 25%;
+      bottom: 15%;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1030px) {
+    li h2 {
+      font-size: 130%;
+      top: 26%;
+      bottom: 15%;
+    }
+  }
+
+  @media (min-width: 506px) and (max-width: 767px) {
+    li h2 {
+      font-size: 120%;
+      top: 15%;
+      vertical-align: middle;
+    }
+  }
+
+  @media screen and (max-width: 505px) {
+    li h2 {
+      font-size: 115%;
+      top: 5%;
+      bottom: 15%;
+
+    }
+}

@@ -1,0 +1,14 @@
+.counter .btn {
+    margin: 0.2em 0.5rem 0.2rem 0.5rem;
+    background-color: #424874;
+    border: #424874;
+    font-family: "Montserrat", sans-serif;
+}
+
+.counter {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+    position: relative;
+	left: 35%;
+}
