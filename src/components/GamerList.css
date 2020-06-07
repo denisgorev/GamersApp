@@ -2,7 +2,10 @@ ul .list-group-item {
     /* height: 6rem; */
     width: 85%;
     margin: 0% 2% 1% 2%;
+    
 }
+
+
 
 h2 {
     font-family: "Montserrat", sans-serif;
@@ -17,7 +20,14 @@ h2 {
     display: flex;
     justify-content: flex-start;
     background-color: #dcd6f7;
+
     
+}
+
+.list {
+    border-radius: 7px !important;
+    border: 1px, solid !important;
+    box-shadow: 0 1px 5px rgb(138, 137, 137) !important;
 }
 
 .del {

@@ -7,6 +7,7 @@ const NavLinks = (props) => {
   return (
     <ul className='nav-links'>
       <li>
+        
         <NavLink to="/" exact={true}>ВЫБОР ИГРЫ</NavLink>
       </li>
 

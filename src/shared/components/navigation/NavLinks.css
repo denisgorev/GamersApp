@@ -19,19 +19,20 @@
     color: #292929;
     text-decoration: none;
     padding: 0.5rem;
+    border-radius: 7px;
   }
   
   .nav-links a:hover,
   .nav-links a:active,
   .nav-links a.active {
     background-color: #dcd6f7;
-    border-color: #292929;
+    /* border-color: #292929; */
     color: #292929;
   }
   
   .nav-links button {
     cursor: pointer;
-    border: 1px solid #292929;
+    /* border: 1px solid #292929; */
     color: #292929;
     background: transparent;
     padding: 0.5rem;

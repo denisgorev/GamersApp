@@ -3,11 +3,9 @@ import React, { useState } from "react";
 import "./Gamer.css";
 
 const Gamer = (props) => {
-	const [click, setClickState] = useState(false);
+	console.log(props.defaultItem);
+
 	const [gamer, setGamer] = useState(false);
-	const handleClick = () => {
-		setClickState(true);
-	};
 
 	const addHandler = (event) => {
 		setGamer(event.target.value);
@@ -17,39 +15,31 @@ const Gamer = (props) => {
 		event.preventDefault();
 		props.onAdd(gamer);
 	};
+	console.log(props.gameDefault);
 	return (
 		<div className='container'>
 			<div className='row'>
 				<div className='col-sm-12 col-md-12 col-lg-12'>
 					<form>
 						<div className='gamer-div'>
-							{!click && (
-								<>
-									<button className='btn btn-secondary' onClick={handleClick}>
-										+
-									</button>{" "}
-									<span>Тапни для начала</span>
-								</>
-							)}
-							{click && (
-								<label>
-									<select onChange={addHandler}>
-										<option defaultValue=''>Выбери игрока</option>
-										<option value='Денис'>Денис</option>
-										<option value='Настя'>Настя</option>
-										<option value='Евгения Алексеевна'>Евгения Алексеевна</option>
-										<option value='Андрей'>Андрей</option>
-									</select>
-									<button
-										className='btn btn-secondary'
-										type='submit'
-										value='Отправить'
-										onClick={addGamerHandler}
-									>
-										Выбрать
-									</button>
-								</label>
-							)}
+							<label>
+								<select onChange={addHandler}>
+									<option defaultValue={props.defaultItem.value}>
+										{props.defaultItem.displayedValue}
+									</option>
+									{props.gamerList.map((gamer, index) => {
+										return <option value={gamer.value}>{gamer.displayedValue}</option>;
+									})}
+								</select>
+								<button
+									className='btn btn-secondary'
+									type='submit'
+									value='Отправить'
+									onClick={addGamerHandler}
+								>
+									Выбрать
+								</button>
+							</label>
 						</div>
 					</form>
 				</div>

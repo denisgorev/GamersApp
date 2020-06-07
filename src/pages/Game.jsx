@@ -1,10 +1,24 @@
 import React, { useState } from "react";
 
 import GamerList from "../components/GamerList";
-import Gamer from '../components/Gamer'
+import Gamer from "../components/Gamer";
 
-const Game = () => {
-	const [gamers, setGamer] = useState([]);
+const Game = (props) => {
+
+    console.log(props.gameType)
+	const gamerList = [
+		{ value: "Денис", displayedValue: "Денис" },
+		{ value: "Настя", displayedValue: "Настя" },
+		{ value: "Евгения Алексеевна", displayedValue: "Евгения Алексеевна" },
+		{ value: "Андрей", displayedValue: "Андрей" },
+    ];
+    
+    const def = { value: "", displayedValue: "Выбери игрока" };
+
+
+    const [gamers, setGamer] = useState([]);
+    
+
 
 	const delGamer = (id) => {
 		setGamer((prevValue) => {
@@ -20,7 +34,9 @@ const Game = () => {
 	};
 	return (
 		<div>
-			<Gamer onAdd={addGamer} />
+            
+            <h1>Выбрана игра: {props.gameType}</h1>
+			<Gamer onAdd={addGamer} gamerList={gamerList} defaultItem={def} />
 			{gamers.map((gamer, i) => {
 				return <GamerList key={i} id={i} gamer={gamer} onDel={delGamer} />;
 			})}

@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import Game from "./pages/Game";
+
+import GameChoice from './pages/GameChoise'
 import MainNavigation from './shared/components/navigation/MainNavigation'
 import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 
@@ -10,14 +11,14 @@ function App() {
             <MainNavigation />
             <main>
 			<Switch>
-				<Route path='/game' exact={true}>
-					<Game />
+				<Route path='/stat' exact={true}>
+					<h1>Здесь будет статистика</h1>
 				</Route>
 
 				<Route path='/' exact={true}>
-					<h1>game page</h1>
+					<GameChoice />
 				</Route>
-				<Redirect to='/game' />
+				<Redirect to='/' />
 			</Switch>
             </main>
 		</Router>
